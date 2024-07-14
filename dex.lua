@@ -10446,7 +10446,7 @@ Main = (function()
 			end
 		end
 		Main.RawAPI = rawAPI
-		api = game:HttpGet("https://github.com/t1ware/DexV5/blob/main/data/rbx_api.dat?raw=true")
+		api = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://github.com/t1ware/DexV5/blob/main/data/rbx_api.dat?raw=true"))
 		
 		local classes,enums = {},{}
 		local categoryOrder,seenCategories = {},{}
